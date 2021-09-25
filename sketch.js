@@ -40,9 +40,12 @@ function draw() {
         music.play();
     }
 
-    if(block2.isTouching(ball) && ball.bounceOff(block2)){
+    if(block2.isTouching(ball)){
         ball.shapeColor = rgb(255,128,0);
-        
+         ball.shapeColor = rgb(255,128,0);
+        ball.velocityX = 0;
+        ball.velocityY = 0;
+        music.stop();
     }
 
     if(block3.isTouching(ball) && ball.bounceOff(block3)){
